@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f5">
+  <title>Duong iu Minh Anh rat nhiu ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="floating-hearts" aria-hidden="true"></div>
+  <section class="birthday-screen" id="birthdayScreen" role="dialog" aria-modal="true" aria-labelledby="birthdayTitle" hidden>
+    <span class="birthday-decoration birthday-decoration-one" aria-hidden="true">🎈</span>
+    <span class="birthday-decoration birthday-decoration-two" aria-hidden="true">✨</span>
+    <span class="birthday-decoration birthday-decoration-three" aria-hidden="true">🎁</span>
+    <span class="birthday-decoration birthday-decoration-four" aria-hidden="true">💖</span>
+    <div class="birthday-card">
+      <div class="birthday-cake" aria-hidden="true">🎂</div>
+      <p class="eyebrow">TODAY IS ALL ABOUT YOU</p>
+      <h1 id="birthdayTitle">Chúc mừng sinh nhật, Minh Anh! 🎉</h1>
+      <p class="birthday-message">Chúc em tuổi mới luôn xinh đẹp, vui vẻ và gặp thật nhiều điều ngọt ngào. Mong mọi ước mơ của em đều thành hiện thực. Cảm ơn em đã đến bên anh — anh thương em nhiều lắm! 💗</p>
+      <p class="birthday-date">17 · 11 · 2026</p>
+      <button class="primary-button" id="birthdayContinue" type="button">Bắt đầu quiz sinh nhật 🎀</button>
+    </div>
+  </section>
+  <header class="site-header">
+    <a class="brand" href="#home">♡ our little world</a>
+    <nav id="siteNav" hidden>
+      <a href="#letters">Thư tình</a>
+      <a href="#quiz">Love quiz</a>
+    </nav>
+    <button class="music-button" id="musicToggle" type="button" aria-label="Bật hoặc tắt nhạc">♫ <span>Bật nhạc</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-sparkle sparkle-one">✦</div>
+      <div class="hero-sparkle sparkle-two">♡</div>
+      <div class="bear" aria-hidden="true">🧸</div>
+      <h1>Hello, Minh Anh! <span>♡</span></h1>
+      <p class="hero-subtitle">Chào em yêu, cuối cùng em cũng đến rồi! 💗</p>
+      <p class="hero-note">Anh nhớ em nhiều lắm. Hôm nay hãy dành cho anh một chút thời gian nhé — anh có một món quà nhỏ muốn gửi em. 🧸</p>
+      <button class="primary-button" id="startJourney" type="button">Bắt đầu nhé, em yêu ♡</button>
+      <div class="scroll-hint">Anh có vài câu hỏi nhỏ dành cho em ↓</div>
+    </section>
+
+    <section class="content-section quiz-section" id="quiz" hidden>
+      <div class="section-heading">
+        <p class="eyebrow" id="quizEyebrow">JUST FOR THE TWO OF US</p>
+        <h2 id="quizTitle">Mình chơi một trò nhỏ nhé? 🎀</h2>
+        <p id="quizDescription">Trả lời lần lượt các câu hỏi để nhận món quà anh chuẩn bị cho em.</p>
+      </div>
+      <div class="quiz-box">
+        <div class="quiz-progress" id="quizProgress">Câu hỏi 1 / 3</div>
+        <h3 id="quizQuestion">Anh thích điều gì nhất khi ở bên em?</h3>
+        <div class="quiz-answers" id="quizAnswers"></div>
+        <p class="quiz-feedback" id="quizFeedback" aria-live="polite">Chọn một đáp án nhé, công chúa!</p>
+        <button class="secondary-button" id="nextQuestion" type="button" hidden>Câu tiếp theo →</button>
+      </div>
+    </section>
+
+    <section class="surprise-section reward-section" id="reward" hidden>
+      <div class="surprise-icon">💌</div>
+      <p class="eyebrow">A LETTER, MADE JUST FOR YOU</p>
+      <h2 id="rewardTitle">Em đã hoàn thành tất cả câu hỏi! 🎉</h2>
+      <p id="rewardDescription">Món quà của em là một bức thư nhỏ từ anh. Mở ra nhé, em yêu.</p>
+      <button class="primary-button" id="openReward" type="button">Mở thư tình của anh 💌</button>
+    </section>
+
+    <div id="afterJourney" hidden>
+    <section class="counter-section section-card">
+      <p class="eyebrow">EVERY DAY WITH YOU IS SPECIAL</p>
+      <h2>Chúng mình đã bên nhau</h2>
+      <div class="counter-number" id="dayCount">♡</div>
+      <p class="counter-caption" id="counterCaption">ngày và còn tiếp tục đếm...</p>
+      <p class="counter-clock" id="counterClock">00 giờ · 00 phút · 00 giây</p>
+      <p class="tiny-note">Từng ngày bên em đều là một món quà.</p>
+    </section>
+
+    <section class="content-section" id="letters">
+      <div class="section-heading">
+        <p class="eyebrow">A LITTLE LOVE FOR YOU</p>
+        <h2>Những điều anh muốn nói 💌</h2>
+        <p>Mỗi chiếc phong bì là một lời thương đang chờ em mở.</p>
+      </div>
+      <div class="letter-grid">
+        <button class="letter-card" data-letter="miss" type="button"><span>💌</span><strong>Khi em nhớ anh</strong><small>Open when you miss me</small></button>
+        <button class="letter-card" data-letter="sad" type="button"><span>🌷</span><strong>Khi em buồn</strong><small>Open when you feel sad</small></button>
+        <button class="letter-card" data-letter="love" type="button"><span>💕</span><strong>Khi muốn được yêu</strong><small>Open when you need love</small></button>
+      </div>
+    </section>
+
+    <section class="surprise-section">
+      <div class="surprise-icon">🎁</div>
+      <p class="eyebrow">A TINY SURPRISE</p>
+      <h2>Em muốn nhận một cái ôm không?</h2>
+      <p id="surpriseMessage">Anh có một món quà nhỏ dành cho em đây...</p>
+      <button class="primary-button" id="surpriseButton" type="button">Nhận cái ôm từ anh ♡</button>
+    </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Made with ♡ by Dương for Minh Anh</p>
+    <small>In this little universe, you are my favorite star.</small>
+  </footer>
+
+  <div class="modal" id="letterModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" data-close="true"></div>
+    <article class="modal-paper">
+      <button class="modal-close" id="closeModal" type="button" aria-label="Đóng">×</button>
+      <div class="modal-icon">💌</div>
+      <h2 id="modalTitle">Gửi Minh Anh</h2>
+      <p id="modalText"></p>
+      <p class="signature">Thương em thật nhiều,<br>Dương ♡</p>
+    </article>
+  </div>
+
+  <audio id="backgroundMusic" src="music/ch%E1%BA%B3ng%20gi%E1%BB%91ng%20gi%C3%A1ng%20sinh%20-%20Lu%20ft.%20Willistic%20%26%20datfitzx%20(Official%20Visualizer).mp3" autoplay loop preload="auto"></audio>
+  <script src="js/app.js"></script>
+</body>
+</html>
