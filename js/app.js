@@ -79,8 +79,9 @@ const letters = {
   }
 };
 const birthdayLetter = {
-  title: "Gửi vk tương lai của anh ❤️",
-  text: `Gửi vk tương lai của anh ❤️
+  title: "Chúc mừng sinh nhật bé Minh Anh 20 tuổi 🎂",
+  text: `Gửi vk tương lai của anh ❤️,
+
 Chào vk iu của anh!
 
 Vậy là vk iu đã chính thức bước sang tuổi 20 rùi. Lễ cưới của chúng ta cũng lại gần thêm một năm nữa nhỉ, hi. Anh đang mong chờ từng ngày để đến cái ngày mà chúng ta có thể thực sự ở bên nhau, không còn phải tranh thủ những buổi tối để lén lút gặp nhau, không còn phải đếm xem một tuần được gặp nhau mấy lần. Mà thay vào đó, chúng ta có thể ở cạnh nhau mỗi ngày, có thể ôm nhau đi ngủ và cùng thức dậy khi những tia nắng đầu tiên chiếu qua cửa sổ. Chỉ nghĩ đến thôi là anh đã thấy hạnh phúc lắm rùi.
@@ -97,11 +98,7 @@ Vk hãy cứ tự tin theo đuổi những điều mình thích nhé. Anh mong v
 
 Cuối cùng, anh chỉ muốn nói rằng: Đối với anh, vk luôn là cô gái xinh đẹp nhất, tuyệt vời nhất, hoàn hảo nhất và đảm đang nhất trên thế giới này :>>. Anh biết chúng ta vẫn còn rất nhiều điều phải học hỏi, rất nhiều thử thách phải cùng nhau vượt qua, nhưng anh tin rằng chỉ cần cả hai luôn yêu thương, thấu hiểu và không ngừng lựa chọn nhau thì chúng ta sẽ có thể đi cùng nhau thật lâu, thật lâu nữa.
 
-Cảm ơn vk vì đã xuất hiện, vì đã yêu thương anh và vì đã cùng anh tạo nên những kỷ niệm thật đẹp. Chúc mừng sinh nhật vk iu của anh! Anh yêu vk nhiều lắm!❤️
-
-Chồng tương lai của em,
-
-Dương`
+Cảm ơn vk vì đã xuất hiện, vì đã yêu thương anh và vì đã cùng anh tạo nên những kỷ niệm thật đẹp. Chúc mừng sinh nhật vk iu của anh! Anh yêu vk nhiều lắm!❤️`
 };
 function getRewardLetter() {
   return birthdayMode ? birthdayLetter : letters.reward;
