@@ -22,7 +22,7 @@ if (birthdayMode) {
   $("#quizTitle").textContent = "Quiz sinh nhật nhỏ xinh 🎂";
   $("#quizDescription").textContent = "Trả lời vài câu hỏi đáng yêu để mở lá thư sinh nhật anh viết riêng cho em.";
   $("#rewardTitle").textContent = "Em đã hoàn thành quiz sinh nhật! 🎉";
-  $("#rewardDescription").textContent = "Phần quà cuối cùng là lá thư chúc mừng sinh nhật của anh. Mở ra nhé, em yêu!";
+  $("#rewardDescription").textContent = "Phần quà cuối cùng là lá thư chúc mừng sinh nhật anh viết riêng cho em. 💌";
   $("#openReward").textContent = "Đọc thư chúc mừng sinh nhật 💌";
 }
 
@@ -62,14 +62,14 @@ setInterval(updateLoveCounter, 1000);
 const letters = {
   reward: {
     title: "Gửi em yêu của anh 💌",
-    text: "Gửi Minh Anh của anh,\n\nCảm ơn em đã đến và làm cho những ngày bình thường của anh trở nên thật đặc biệt. Anh mong em luôn nhớ rằng em xứng đáng được yêu thương, được lắng nghe và được vui vẻ mỗi ngày.\n\nDù hôm nay của em thế nào, anh vẫn luôn ở đây, thương em bằng tất cả sự dịu dàng của mình. Anh sẽ cố gắng tạo thêm thật nhiều kỷ niệm đẹp cùng em nhé.\n\nAnh thương em nhiều lắm! 💗"
+    text: "Gửi Minh Anh của anh,\n\nCảm ơn em đã đến và làm cho những ngày bình thường của anh trở nên thật đặc biệt. Anh mong em luôn nhớ rằng em xứng đáng được yêu thương, được lắng nghe và được vui vẻ mỗi ngày.\n\nDù hôm nay của em thế nào, anh vẫn luôn ở đây, thương em bằng tất cả sự dịu dàng của mình. Anh sẽ cố gắng tạo thêm thật nhìu kỷ niệm đẹp cùng em nhé.\n\nAnh thương em nhìu lắm! 💗"
   },
   miss: {
-    title: "Khi em nhớ anh 💌",
-    text: "Nếu em đang đọc những dòng này vì nhớ anh, thì anh muốn gửi em một cái ôm thật chặt. Dù lúc này không ở cạnh nhau, anh vẫn luôn nghĩ về em. Mong em luôn vui và nhớ rằng có một người thương em rất nhiều."
+    title: "Khi vk nhớ anh 💌",
+    text: "Nếu em đang đọc những dòng này vì nhớ anh, thì anh muốn gửi em một cái ôm thật chặt. Dù lúc này không ở cạnh nhau, anh vẫn luôn nghĩ về em. Mong em luôn vui và nhớ rằng có một người thương em rất nhìu."
   },
   sad: {
-    title: "Khi em cảm thấy buồn 🌷",
+    title: "Khi vk buồn 🌷",
     text: "Em không cần lúc nào cũng phải mạnh mẽ hay vui vẻ đâu. Nếu hôm nay không ổn, cứ nghỉ ngơi một chút nhé. Anh mong mình có thể ở cạnh để lắng nghe em, ôm em và nhắc em rằng em không phải một mình."
   },
   love: {
@@ -78,8 +78,29 @@ const letters = {
   }
 };
 const birthdayLetter = {
-  title: "Chúc mừng sinh nhật em yêu 💖",
-  text: "Gửi Minh Anh yêu dấu,\n\nChúc mừng sinh nhật cô gái đặc biệt nhất trong lòng anh! Chúc em tuổi mới luôn bình an, vui vẻ, rạng rỡ và gặp thật nhiều điều tốt đẹp. Mong những ước mơ em ấp ủ sẽ lần lượt trở thành hiện thực.\n\nCảm ơn em đã đến bên anh và khiến thế giới của anh trở nên ấm áp hơn. Hôm nay là ngày của em, hãy cười thật nhiều, nhận thật nhiều yêu thương và luôn nhớ rằng anh thương em rất nhiều.\n\nChúc em có một sinh nhật thật ngọt ngào! 🎂🎁💗"
+  title: "Gửi vk tương lai của anh ❤️",
+  text: `Gửi vk tương lai của anh ❤️
+Chào vk iu của anh!
+
+Vậy là vk iu đã chính thức bước sang tuổi 20 rùi. Lễ cưới của chúng ta cũng lại gần thêm một năm nữa nhỉ, hi. Anh đang mong chờ từng ngày để đến cái ngày mà chúng ta có thể thực sự ở bên nhau, không còn phải tranh thủ những buổi tối để lén lút gặp nhau, không còn phải đếm xem một tuần được gặp nhau mấy lần. Mà thay vào đó, chúng ta có thể ở cạnh nhau mỗi ngày, có thể ôm nhau đi ngủ và cùng thức dậy khi những tia nắng đầu tiên chiếu qua cửa sổ. Chỉ nghĩ đến thôi là anh đã thấy hạnh phúc lắm rùi.
+
+Vậy là chúng ta đã cùng nhau đón sinh nhật của nhau được một lần rồi đấy. Nghe thì có vẻ chưa lâu, nhưng với anh, đó cũng là một chặng đường chứa đựng rất nhiều kỷ niệm đáng nhớ. Anh từng nghe nói rằng khoảng thời gian khó khăn nhất khi yêu nhau là từ 3 đến 6 tháng, bởi đó là lúc những điều mới mẻ ban đầu dần qua đi, hai người bắt đầu nhìn thấy những thói quen, những khuyết điểm của nhau. Nhưng mà lạ thật, anh chẳng thấy tình yêu dành cho vk vơi đi chút nào, ngược lại còn ngày càng nhiều hơn. Anh càng ngày càng iu vk, iu muốn chít lun mất! Chỉ muốn ngày nào cũng được gặp vk, được ôm vk thật chặt, hun vk thật nhiều và được nghe vk kể đủ thứ chuyện trên đời.
+
+Nhân dịp vk bước sang tuổi mới, điều đầu tiên anh muốn chúc là vk sẽ luôn được yêu thương thật nhiều, đặc biệt là được anh yêu thương mỗi ngày. Mong rằng tình yêu của chúng ta sẽ ngày càng lớn hơn, để sau này nhìn lại, chúng ta vẫn có thể tự hào rằng mình đã luôn chọn nhau, yêu thương nhau và cùng nhau đi qua thật nhiều năm tháng.
+
+Anh chúc vk luôn có thật nhiều sức khỏe, lúc nào cũng vui vẻ, bình an và ngày càng xinh đẹp. Mà thật ra bây giờ vk đã xinh lắm rùi, anh cũng không biết nếu còn xinh đẹp hơn nữa thì sẽ như thế nào đây. Chắc anh phải giữ vk thật kỹ mất, không lại có anh nào nhìn thấy rồi cướp vk khỏi tay anh thì sao, hihi.
+
+Anh cũng chúc cho việc học tập và công việc của vk ngày càng thuận lợi, gặt hái được thật nhiều thành công. Anh biết vk là một cô gái rất giỏi giang và có nhiều khả năng, nên anh luôn tin rằng vk sẽ làm được những điều mình mong muốn. Tất nhiên, trên hành trình ấy sẽ có những lúc khó khăn, mệt mỏi hay không được như ý. Nhưng vk hãy nhớ rằng vk không bao giờ phải một mình cả. Phía sau vk luôn có anh, sẵn sàng lắng nghe, động viên và đồng hành cùng vk. Nếu vk thành công, anh sẽ là người cười thật to và tự hào về vk nhất. Còn nếu vk thất bại, anh sẽ là người ôm vk thật lâu, để vk biết rằng dù thế nào đi nữa, anh vẫn luôn ở đây và thương vk như vậy.
+
+Vk hãy cứ tự tin theo đuổi những điều mình thích nhé. Anh mong vk sẽ có một tuổi 20 thật rực rỡ, có thêm nhiều trải nghiệm đẹp, thực hiện được những ước mơ của mình và luôn giữ được nụ cười thật tươi trên môi.
+
+Cuối cùng, anh chỉ muốn nói rằng: Đối với anh, vk luôn là cô gái xinh đẹp nhất, tuyệt vời nhất, hoàn hảo nhất và đảm đang nhất trên thế giới này :>>. Anh biết chúng ta vẫn còn rất nhiều điều phải học hỏi, rất nhiều thử thách phải cùng nhau vượt qua, nhưng anh tin rằng chỉ cần cả hai luôn yêu thương, thấu hiểu và không ngừng lựa chọn nhau thì chúng ta sẽ có thể đi cùng nhau thật lâu, thật lâu nữa.
+
+Cảm ơn vk vì đã xuất hiện, vì đã yêu thương anh và vì đã cùng anh tạo nên những kỷ niệm thật đẹp. Chúc mừng sinh nhật vk iu của anh! Anh yêu vk nhiều lắm!❤️
+
+Chồng tương lai của em,
+
+Dương`
 };
 function getRewardLetter() {
   return birthdayMode ? birthdayLetter : letters.reward;
@@ -115,19 +136,19 @@ document.addEventListener("keydown", (event) => {
 const questions = [
   {
     question: "Anh thích điều gì nhất khi ở bên em?",
-    answers: ["Được nhìn em cười", "Được ăn thật nhiều", "Được đi ngủ", "Cả thế giới biết anh đẹp trai"],
+    answers: ["Được nhìn em cười", "Được ăn thật nhìu", "Được đi ngủ", "Cả thế giới biết anh đẹp trai"],
     correct: 0,
     message: "Chính xác! Nụ cười của em là điều anh thích nhất. 💗"
   },
   {
     question: "Nếu được chọn một ngày hoàn hảo cùng nhau, anh muốn...",
-    answers: ["Ở nhà chơi game", "Cùng em đi khám phá một nơi mới", "Chỉ ngủ cả ngày", "Đi mua thật nhiều đồ"],
+    answers: ["Ở nhà chơi game", "Cùng em đi khám phá một nơi mới", "Chỉ ngủ cả ngày", "Đi mua thật nhìu đồ"],
     correct: 1,
     message: "Đúng rồi! Đi đâu cũng được, miễn là có em. 🌷"
   },
   {
     question: "Thông điệp quan trọng nhất anh muốn gửi em là gì?",
-    answers: ["Nhớ ăn uống đầy đủ", "Đừng thức khuya", "Anh thương em rất nhiều", "Tất cả đều đúng"],
+    answers: ["Nhớ ăn uống đầy đủ", "Đừng thức khuya", "Anh thương em rất nhìu", "Tất cả đều đúng"],
     correct: 3,
     message: "Giỏi quá! Anh mong em luôn cảm nhận được tình yêu này. 🧸"
   }
@@ -137,7 +158,7 @@ function renderQuestion() {
   const question = questions[questionIndex];
   $("#quizProgress").textContent = `Câu hỏi ${questionIndex + 1} / ${questions.length}`;
   $("#quizQuestion").textContent = question.question;
-  $("#quizFeedback").textContent = "Chọn một đáp án nhé, công chúa!";
+  $("#quizFeedback").textContent = "Chọn một đáp án nhé, em yêu!";
   $("#nextQuestion").hidden = true;
   const answers = $("#quizAnswers");
   answers.innerHTML = "";
@@ -193,7 +214,7 @@ const surprises = [
   "Anh gửi em một cái ôm thật lâu và một nụ hôn lên trán. 💗",
   "Nhắc em một điều: em là một trong những điều tuyệt vời nhất của anh. 🌷",
   "Nếu hôm nay mệt rồi thì nghỉ ngơi nhé. Anh luôn cổ vũ em. 🧸",
-  "Nhiệm vụ hôm nay: cười thật nhiều vì có người thương em lắm! ✨"
+  "Nhiệm vụ hôm nay: cười thật nhìu vì có người thương em lắm! ✨"
 ];
 $("#surpriseButton").addEventListener("click", () => {
   $("#surpriseMessage").textContent = surprises[Math.floor(Math.random() * surprises.length)];
