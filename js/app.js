@@ -3,7 +3,8 @@
 // ================================
 const CONFIG = {
   relationshipStartDate: "2026-06-28",
-  birthdayDate: "2026-11-17"
+  birthdayDate: "2026-11-17",
+  birthdayLetterPassword: "20042006"
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -107,6 +108,34 @@ function getRewardLetter() {
 }
 
 const modal = $("#letterModal");
+const birthdayPasswordModal = $("#birthdayPasswordModal");
+$("#readBirthdayLetter").addEventListener("click", () => {
+  $("#birthdayPassword").value = "";
+  $("#birthdayPasswordFeedback").textContent = "";
+  birthdayPasswordModal.hidden = false;
+  $("#birthdayPassword").focus();
+});
+function closeBirthdayPasswordModal() {
+  birthdayPasswordModal.hidden = true;
+}
+$("#closeBirthdayPassword").addEventListener("click", closeBirthdayPasswordModal);
+birthdayPasswordModal.addEventListener("click", (event) => {
+  if (event.target.dataset.closeBirthdayPassword === "true") closeBirthdayPasswordModal();
+});
+$("#birthdayPasswordForm").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const passwordInput = $("#birthdayPassword");
+  if (passwordInput.value !== CONFIG.birthdayLetterPassword) {
+    $("#birthdayPasswordFeedback").textContent = "Mật khẩu chưa đúng, thử lại nhé vk iu.";
+    passwordInput.select();
+    return;
+  }
+
+  closeBirthdayPasswordModal();
+  $("#modalTitle").textContent = birthdayLetter.title;
+  $("#modalText").textContent = birthdayLetter.text;
+  modal.hidden = false;
+});
 document.querySelectorAll("[data-letter]").forEach((button) => {
   button.addEventListener("click", () => {
     const letter = letters[button.dataset.letter];
@@ -130,6 +159,7 @@ modal.addEventListener("click", (event) => {
 });
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeLetter();
+  if (event.key === "Escape") closeBirthdayPasswordModal();
 });
 
 // 3. Quiz tình yêu - có thể sửa câu hỏi và đáp án ở đây.

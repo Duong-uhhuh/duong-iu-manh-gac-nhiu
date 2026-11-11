@@ -44,6 +44,7 @@
       <p class="hero-subtitle">Chào vk iu, cuối cùng em cũng đến rồi! 💗</p>
       <p class="hero-note">Anh nhớ em nhìu lắm. Hôm nay hãy dành cho anh một chút thời gian nhé — anh có món quà nhỏ muốn gửi em. 🧸</p>
       <button class="primary-button" id="startJourney" type="button">Bắt đầu nhé, em ♡</button>
+      <button class="secondary-button birthday-preview-button" id="readBirthdayLetter" type="button">Đọc thư sinh nhật trước 🔐</button>
       <div class="scroll-hint">Anh có vài câu hỏi nhỏ dành cho em ↓</div>
     </section>
 
@@ -116,6 +117,22 @@
       <h2 id="modalTitle">Gửi Minh Anh</h2>
       <p id="modalText"></p>
       <p class="signature">Thương em nhìu,<br>Dương ♡</p>
+    </article>
+  </div>
+
+  <div class="modal" id="birthdayPasswordModal" role="dialog" aria-modal="true" aria-labelledby="birthdayPasswordTitle" hidden>
+    <div class="modal-backdrop" data-close-birthday-password="true"></div>
+    <article class="modal-paper password-paper">
+      <button class="modal-close" id="closeBirthdayPassword" type="button" aria-label="Đóng">×</button>
+      <div class="modal-icon">🔐</div>
+      <h2 id="birthdayPasswordTitle">Một bí mật nhỏ nè 💌</h2>
+      <p>Nhập mật khẩu để đọc thư sinh nhật trước nhé.</p>
+      <form id="birthdayPasswordForm">
+        <label class="password-label" for="birthdayPassword">Mật khẩu</label>
+        <input id="birthdayPassword" class="password-input" type="password" inputmode="numeric" autocomplete="off" required>
+        <p class="password-feedback" id="birthdayPasswordFeedback" aria-live="polite"></p>
+        <button class="primary-button" type="submit">Mở thư sinh nhật ♡</button>
+      </form>
     </article>
   </div>
 
