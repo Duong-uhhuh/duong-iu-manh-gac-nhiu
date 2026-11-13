@@ -178,6 +178,14 @@ const questions = [
     answers: ["Nhớ ăn uống đầy đủ", "Đừng thức khuya", "Anh thương em rất nhìu", "Tất cả đều đúng"],
     correct: 3,
     message: "Giỏi quá! Anh mong em luôn cảm nhận được tình yêu này. 🧸"
+  },
+  {
+    question: "Ảnh này được chụp khi nào?",
+    image: "pics/ainh%20nhat%2023%208.jpg",
+    imageAlt: "Kỷ niệm của hai đứa mình",
+    answers: ["23 tháng 8", "24 tháng 8", "25 tháng 8", "22 tháng 8"],
+    correct: 0,
+    message: "Đúng rồi! Bức ảnh được chụp vào ngày 23 tháng 8. 💗"
   }
 ];
 let questionIndex = 0;
@@ -185,6 +193,15 @@ function renderQuestion() {
   const question = questions[questionIndex];
   $("#quizProgress").textContent = `Câu hỏi ${questionIndex + 1} / ${questions.length}`;
   $("#quizQuestion").textContent = question.question;
+  const image = $("#quizImage");
+  image.hidden = !question.image;
+  if (question.image) {
+    image.src = question.image;
+    image.alt = question.imageAlt;
+  } else {
+    image.removeAttribute("src");
+    image.alt = "";
+  }
   $("#quizFeedback").textContent = "Chọn một đáp án nhé, em yêu!";
   $("#nextQuestion").hidden = true;
   const answers = $("#quizAnswers");
