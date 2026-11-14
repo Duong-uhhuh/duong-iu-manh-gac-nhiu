@@ -4,21 +4,27 @@
 const CONFIG = {
   relationshipStartDate: "2026-06-28",
   birthdayDate: "2026-11-17",
+  earlyBirthdayDate: "2026-11-15",
   birthdayLetterPassword: "20042006"
 };
 
 const $ = (selector) => document.querySelector(selector);
 
-function isBirthday() {
-  const [year, month, day] = CONFIG.birthdayDate.split("-").map(Number);
+function matchesDate(dateString) {
+  const [year, month, day] = dateString.split("-").map(Number);
   const today = new Date();
   return today.getFullYear() === year && today.getMonth() === month - 1 && today.getDate() === day;
 }
 
-const birthdayMode = isBirthday() || new URLSearchParams(window.location.search).get("birthday") === "preview";
+const earlyBirthdayMode = matchesDate(CONFIG.earlyBirthdayDate);
+const birthdayMode = earlyBirthdayMode || matchesDate(CONFIG.birthdayDate) || new URLSearchParams(window.location.search).get("birthday") === "preview";
 
 if (birthdayMode) {
   $("#birthdayScreen").hidden = false;
+  if (earlyBirthdayMode) {
+    $("#birthdayTitle").textContent = "Có thiệp sinh nhật sớm cho vk iu 💌";
+    $("#birthdayMessage").textContent = "Dù hôm nay chưa đến sinh nhật em, em là ngoại lệ nên em sẽ nhận được thiệp sinh nhật từ hôm nay. 💗";
+  }
   $("#quizEyebrow").textContent = "A BIRTHDAY QUIZ JUST FOR YOU";
   $("#quizTitle").textContent = "Quiz sinh nhật nhỏ xinh 🎂";
   $("#quizDescription").textContent = "Trả lời vài câu hỏi đáng yêu để mở lá thư sinh nhật anh viết riêng cho em.";
@@ -186,6 +192,13 @@ const questions = [
     answers: ["23 tháng 8", "24 tháng 8", "25 tháng 8", "22 tháng 8"],
     correct: 0,
     message: "Đúng rồi! Bức ảnh được chụp vào ngày 23 tháng 8. 💗"
+  },
+  {
+    question: "Đố vk biết anh iu vk nhìu đến mức nào?",
+    answers: ["Uh huh, cũng bình thường", "Hơi hơi", "Iu nhìu", "Iu siu siu nhìuuuuu"],
+    correct: 3,
+    retryUntilCorrect: true,
+    message: "Đúng rùi! Anh iu vk siu siu nhìuuuuu luôn! ❤️"
   }
 ];
 let questionIndex = 0;
@@ -212,6 +225,11 @@ function renderQuestion() {
     button.type = "button";
     button.textContent = answer;
     button.addEventListener("click", () => {
+      if (question.retryUntilCorrect && index !== question.correct) {
+        $("#quizFeedback").textContent = "Chưa đúng rùi, thử chọn lại xem anh iu vk nhìu cỡ nào nha! 💕";
+        return;
+      }
+
       answers.querySelectorAll("button").forEach((item) => item.disabled = true);
       $("#quizFeedback").textContent = index === question.correct
         ? question.message
