@@ -133,6 +133,7 @@ footer small { font-size: .75rem; }
 .modal-icon { font-size: 2.4rem; text-align: center; }
 .modal-paper h2 { text-align: center; color: var(--deep-pink); }
 .modal-paper p { line-height: 1.9; white-space: pre-line; }
+#modalText { text-align: justify; }
 .signature { text-align: right; color: var(--deep-pink); font-family: 'Pacifico', cursive; }
 .modal-close { position: sticky; top: 0; display: block; margin: -24px -16px 0 auto; border: 0; background: #fffafd; color: #bd7b98; font-size: 1.8rem; line-height: 1.2; z-index: 1; }
 .floating-hearts { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 10; }
