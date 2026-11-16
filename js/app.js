@@ -4,7 +4,7 @@
 const CONFIG = {
   relationshipStartDate: "2026-06-28",
   birthdayDate: "2026-11-17",
-  earlyBirthdayDate: "2026-11-15",
+  earlyBirthdayDates: ["2026-11-15", "2026-11-16"],
   birthdayLetterPassword: "20042006"
 };
 
@@ -16,12 +16,12 @@ function matchesDate(dateString) {
   return today.getFullYear() === year && today.getMonth() === month - 1 && today.getDate() === day;
 }
 
-const earlyBirthdayMode = matchesDate(CONFIG.earlyBirthdayDate);
+const earlyBirthdayMode = CONFIG.earlyBirthdayDates.some(matchesDate);
 const birthdayMode = earlyBirthdayMode || matchesDate(CONFIG.birthdayDate) || new URLSearchParams(window.location.search).get("birthday") === "preview";
 
 if (birthdayMode) {
   $("#birthdayScreen").hidden = false;
-  if (earlyBirthdayMode) {
+  if (matchesDate(CONFIG.earlyBirthdayDates[0])) {
     $("#birthdayTitle").textContent = "Có thiệp sinh nhật sớm cho vk iu 💌";
     $("#birthdayMessage").textContent = "Dù hôm nay chưa đến sinh nhật em, em là ngoại lệ nên em sẽ nhận được thiệp sinh nhật từ hôm nay. 💗";
   }
